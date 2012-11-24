@@ -37,5 +37,8 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-# Use Koala for Facebook Graph API
-gem 'koala'
+# Use Devise + OmniAuth for Facebook Connect
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'oauth2'
