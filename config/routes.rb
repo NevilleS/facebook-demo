@@ -3,6 +3,9 @@ FacebookDemo::Application.routes.draw do
 
   resources :users
 
+  # Redirect callback to omniauth
+  match '/auth/:provider/callback' => 'authentications#create'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
