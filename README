@@ -1,0 +1,15 @@
+/************************************************************
+*                 Facebook on Rails Demo                    *
+************************************************************/
+
+========================SUMMARY==============================
+
+Just a simple Rails app to tinker with the Facebook Graph API
+
+======================INSTALLATION==========================
+
+Install Rails. I'm using the Koala gem, so you'll need to install
+that too.
+
+========================AUTHORS==============================
+Neville Samuell
