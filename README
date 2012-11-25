@@ -1,0 +1,12 @@
+/************************************************************
+*               Simple Demo: a bad Facebook app             *
+*************************************************************/
+
+========================SUMMARY==============================
+
+A really basic Rails app that uses the Koala gem to authenticate and
+display some basic information about the user.
+
+========================AUTHORS==============================
+Neville Samuell
+
