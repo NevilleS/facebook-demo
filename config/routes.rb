@@ -7,7 +7,7 @@ FacebookDemo::Application.routes.draw do
   match '/auth/:provider/callback' => 'authentications#create'
 
   # Default route
-  root :to => 'user#index'
+  root :to => 'users#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
