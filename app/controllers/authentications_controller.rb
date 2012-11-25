@@ -11,8 +11,9 @@ class AuthenticationsController < ApplicationController
     else
       # Create a new user
       user = User.new
+      user.password = Devise.friendly_token[0,20]
       user.apply_omniauth(auth)
-      if user.save(:validate => false)
+      if user.save
         flash[:notice] = "Created new account!"
         sign_in_and_redirect(:user, user)
       else
@@ -20,4 +21,5 @@ class AuthenticationsController < ApplicationController
         redirect_to root_url
       end
     end
+  end
 end

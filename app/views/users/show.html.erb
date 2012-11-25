@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
-  <%= @user.name %>
+<% for attribute in @user.attributes.keys %>
+  <p><%= attribute.humanize %> <%= @user.attributes[attribute].to_s %></p>
+<% end %>
 </p>
 
 
