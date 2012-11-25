@@ -19,5 +19,21 @@
 </table>
 
 <br />
+<% unless session.nil? %>
+  <p>Has session:</p>
+  <ul>
+    <% session.each do |key, value| %>
+      <li><%= key %>: <%= value %></li>
+    <% end %>
+  </ul>
+<% end %>
+<% unless @data.nil? %>
+  <p>Has data:</p>
+  <ul>
+    <% @data.each do |key, value| %>
+      <li><%= key %>: <%= value %></li>
+    <% end %>
+  </ul>
+<% end %>
 
 <%= link_to 'Login with Facebook', '/auth/facebook' %>

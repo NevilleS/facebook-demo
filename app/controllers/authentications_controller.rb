@@ -5,6 +5,9 @@ class AuthenticationsController < ApplicationController
     # See if we already have an Authentication for this user
     authentication = Authentication.find_by_provider_and_uid(auth['provider'], auth['uid'])
 
+    # Cache the omniauth data
+    session["devise.omniauth"] = request.env["omniauth.auth"]
+
     if authentication
       flash[:notice] = "Signed in!"
       sign_in_and_redirect(:user, authentication.user)
